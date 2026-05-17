@@ -7,27 +7,27 @@ Borderless templates artificially increase the maximum cutting area and maximum 
 
 For example, `letter` paper with `standard` card size results in a 4x2 layout:
 
-![4x2 layout](../../static/images/letter-standard_layout.png)
+![4x2 layout](/images/letter-standard_layout.png)
 
 However, with borderless templates, we can have a 3x3 layout:
 
-![3x3 layout](../../static/images/letter-standard-borderless_layout.png)
+![3x3 layout](/images/letter-standard-borderless_layout.png)
 
 ## How It Works
 
 Silhouette Studio limits the minimum inset of registration marks to 10mm.
 
-![Inset settings](../../static/images/inset_settings.png)
+![Inset settings](/images/inset_settings.png)
 
 A smaller inset would allow us to have a greater cutting area and more cards per sheet. Compare the following insets and cutting areas:
 
-![Inset comparison](../../static/images/inset_comparison.png)
+![Inset comparison](/images/inset_comparison.png)
 
 We cannot reduce the inset below 10mm as that is a hard limit set by Silhouette Studio. Instead, we can circumnavigate the limit by using custom media sizes.
 
 By adding 13mm to the paper width and height settings, we can effectively use a 3.5mm inset.
 
-<!-- ![Inset change](../../static/images/inset_change.png) -->
+<!-- ![Inset change](/images/inset_change.png) -->
 
 The inset is still set at 10mm in Silhouette Studio but the software believes we are using a larger piece of paper.
 
@@ -79,16 +79,16 @@ To improve registration reliability, you may need something to hide stray marks 
 
 For example, I use masking tape to hide the text in the top left and the grid lines. I place the tape 7.5mm from the grid so I can overlap my paper over the tape.
 
-![Borderless mat preparation](../../static/images/borderless_mat_with_tape.jpg)
+![Borderless mat preparation](/images/borderless_mat_with_tape.jpg)
 
-![Borderless mat placement](../../static/images/borderless_placement.jpg)
+![Borderless mat placement](/images/borderless_placement.jpg)
 
 Notice the overlap. A clear gap may cause registration issues.
 
-![Borderless mat overlap](../../static/images/borderless_overlap.jpg)
+![Borderless mat overlap](/images/borderless_overlap.jpg)
 
 The rest is the same!
 
-![Borderless inside machine](../../static/images/borderless_machine.jpg)
+![Borderless inside machine](/images/borderless_machine.jpg)
 
-![Borderless completed](../../static/images/borderless_completed.jpg)
+![Borderless completed](/images/borderless_completed.jpg)
