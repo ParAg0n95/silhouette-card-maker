@@ -46,14 +46,20 @@ def generate_tables():
     print("| Format |", " | ".join(f"`{p}`" for p in paper_order), "|")
     print("|---|" + "---|" * len(paper_order))
 
+    borderless_unsupported = {"a3", "arch_b"}
+
     for card in card_order_alpha:
         cells = []
         for paper in paper_order:
+            if paper in borderless_unsupported:
+                cells.append("N/A")
+                continue
             default = config.layouts.get(paper, {}).get(card, {}).get("default")
             borderless = config.layouts.get(paper, {}).get(card, {}).get("borderless")
             if default and borderless:
                 improvement = (borderless.num_cols * borderless.num_rows) - (default.num_cols * default.num_rows)
-                cells.append(f"{borderless.num_cols}x{borderless.num_rows} ({improvement:+d})")
+                cell = f"{borderless.num_cols}x{borderless.num_rows} ({improvement:+d})"
+                cells.append(f"**{cell}**" if improvement > 0 else cell)
             else:
                 cells.append("N/A")
         print(f"| `{card}` | {' | '.join(cells)} |")
